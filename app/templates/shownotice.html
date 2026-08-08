@@ -1,0 +1,17 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style3.css' %}">
+<div class="notice-list">
+    {% for notice in notices %}
+        <div class="notice-card">
+            <h3>{{ notice.title }}</h3>
+            <p>{{ notice.text }}</p>
+            <small>{{ notice.date }}</small>
+        </div>
+    {% empty %}
+        <p>No notices available.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

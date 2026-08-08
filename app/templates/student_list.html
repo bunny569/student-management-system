@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Student data</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">RollNo</th>
+      <th scope="col">Name</th>
+      <th scope="col">Course</th>
+      <th scope="col">DOB</th>
+       <th scope="col">Gender</th>
+        <th scope="col">Phonenumber</th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for student in students %}
+      <th scope="row">{{ student.roll_number }}</th>
+      <td>{{ student.name }}</td>
+      <td>{{ student.course }}</td>
+      <td>{{ student.date_of_birth }}</td>
+      <td>{{ student.gender }}</td>
+      <td>{{ student.phone }}</td>
+      <td> <a class="btn btn-primary" href="{% url 'editstudent' pk=student.pk  %}">Edit</a></td>
+      <td><a class="btn btn-danger" href="{% url 'deletestudent' pk=student.pk %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+
+
+
+{% endblock %}

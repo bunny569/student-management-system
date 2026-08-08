@@ -1,0 +1,138 @@
+.home{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    min-height:100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    
+
+}
+.glass{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    width:600px;
+    flex-direction:column;
+    background:rgba(255, 255, 255, 0.15);
+    backdrop-filter:blur(12px);
+    border-radius:15px;
+    border:1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  
+}
+.home2{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    width:100%;
+    min-height:100vh;
+    padding:40px 0;
+    background:linear-gradient(135deg, #667eea, #764ba2);
+    background-size:cover;
+    background-position:center;
+    
+    
+
+}
+.form{
+  
+    min-height:600px;
+    width:600px;
+    background:#FFFF;
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    border:1px solid rgba(238, 234, 234, 0.11);
+    box-shadow:3px 3px 3px rgpa(0,0,0,0,089);
+}
+.home2 input[type="submit"]{
+    width:100px;
+    background:#667eea;
+    margin-left:250px;
+    border-radius:14px;
+    justify-content:center;
+}
+.home2 input[type="submit"]:hover{
+    background:rgb(89, 238, 89);
+    border:rgb(89, 238, 89);
+}
+.form p{
+    margin-bottom:15px;
+     color:black;
+     margin-left:5px;
+     margin-top:3px;
+     
+    
+}
+.form input,
+.form select,
+.form textarea{
+    width:100%;
+    padding:5px;
+    border:1px solid #ccc;
+    border-radius:15px;
+    font-size:15px;
+    
+    
+   
+}
+h2{
+    display:block;
+}
+.box{
+    display: flex;
+    gap: 50px;
+    background: #FFFFFF;
+    width: 600px;
+    height: 600px;
+    margin:100px auto;
+    padding: 20px;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    border-radius: 20px;
+
+}
+.card{
+    width:350px;
+    height:350px;
+    align-items:center;
+    justify-content:center;
+    background: #E8F0FE;
+    border-radius: 16px;
+}
+#home{
+    background-color:lightblue;
+}
+body{
+    background:#EEF5FF;
+}
+.profile{
+    align-items:center;
+    margin-bottom:60px;
+    font-weight:500;
+}
+.profile-info{
+    display:flex;
+    margin:0 auto;
+    flex-direction:column;
+    font-size:20px;
+    font-weight:500;
+
+}
+
+.message{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}

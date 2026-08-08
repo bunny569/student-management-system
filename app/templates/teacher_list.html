@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Teacher List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Teacher_id</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Course</th>
+            <th>Date of Joing</th>
+            <th>gender</th>
+            <th>phone</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for teacher in teachers %}
+        <tr>
+            <td>{{ teacher.teacher_id }}</td>
+            <td>{{ teacher.name }}</td>
+            <td>{{ teacher.department }}</td>
+            <td>{{ teacher.date_of_joining }}</td>
+            <td>{{ teacher.gender }}</td>
+            <td>{{ teacher.phone }}</td>
+            <td><a class="btn btn-primary" href="{% url 'editteacher' pk=teacher.pk %}">Edit</a></td>
+            <td><a class="btn btn-danger" href="{% url 'deleteteacher' pk=teacher.pk %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

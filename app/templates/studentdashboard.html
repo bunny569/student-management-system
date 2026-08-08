@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="box">
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Profile</h5>
+        <p class="card-text">RollNo:{{ student.roll_number }}</p>
+        <p class="card-text">Year:{{ student.year }}</p>
+        <p class="card-text">Name:{{ student.name }}</p>
+        <p class="card-text">Course:{{ student.course }}</p>
+        <p class="card-text">Gender:{{ student.gender }}</p>
+  </div>
+</div>
+   
+
+    <div class="card" style="width: 18rem">
+        <div class="card-body">
+            <h5 class="card-title">Attendence</h5>
+            <p class="card-text">Present:{{ presentcount }}</p>
+            <p class="card-text">Absent:{{ absentcount }}</p>
+            <p class="card-text">Percentage:{{ percentage }}</p>
+        </div>
+        
+    </div>
+</div>
+   
+{% endblock %}

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+<body class="body1">
+ <div class="navbar1">
+       <nav class="nav">
+        <h1 class="brand">Student Managment System</h1>
+        <a href="{% url 'login' %}" class="login-btn">Login</a>
+    </nav>
+ </div>
+
+ <div class="box1">
+    <div class="left"><h1 class="archivo-black-regular">
+            Welcome to the Student Management System
+        </h1>
+
+        <p>
+            Manage students, teachers, courses and attendance
+            from one place.
+        </p></div>
+        <div class="right"><img src="https://images.openai.com/static-rsc-4/stDuqT7tGmnQEjh8pMqXyxhRRcksdJV4Fp5zfit-8GBAlYNlT0WLZ7VupGsmJUnBePbycu_dmzrdJAljoHqBYz5BpEaK7bKGRQ6TPk5tjofGGBXL8XIicSTwC7FhL35tSabSgHlBTJQYavzK2t1ke_qzBElPVnKzITvHr1AKAFHJgi2iTfdCxsVR-ZAU8ADk?purpose=fullsize" alt="student"></div>
+        
+ </div>
+ 
+</body>
+</html>

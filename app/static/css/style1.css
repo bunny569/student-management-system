@@ -1,0 +1,109 @@
+
+body{
+  margin:0px;
+    padding:0px;
+    background:  #A5CF83;
+    
+
+}
+
+.box3{
+    display:flex;
+    align-items:center;
+    width:300px;
+    height:350px;
+    margin:200px auto;
+    background:#FFFFFF;
+    border-radius:15px;
+    flex-direction:column;
+    padding:40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    
+
+}
+form{
+    display:block;
+    margin-block:50px;
+}
+.box3 form p {
+    display: flex;
+    flex-direction: column;
+}
+.box3 input{
+     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.box3 input[type="submit"]{
+    display:block;
+    width:150px;
+    margin:20px auto;
+    border-radius:10px;
+    border:none;
+    background: #2563EB;
+    padding:4px;
+    cursor:pointer;
+}
+
+form label{
+    color:black;
+    font-weight:bold;
+    line-height:1.4rem;
+}
+form button{
+    display:block;
+    width:100px;
+    margin:20px auto;
+    border-radius:10px;
+    border:none;
+    background: #2563EB;
+    padding:5px;
+    cursor:pointer;
+    font-size:20px;
+    font-weight:100;
+}
+form button:hover{
+     background: #1D4E;
+}
+.box2 {
+    display: flex;
+    align-items: stretch;
+    width: 300px;
+    min-height: 200px;
+    margin: 10px auto;
+    padding: 30px;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border-radius: 15px;
+    flex-direction: column;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+
+.box2 input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.box2 input[type="submit"] {
+   display:block;
+   margin:30px auto;
+}
+
+.box2 input[type="submit"]:hover{
+    align-self:center;
+    background:#1D4E;
+    border:green;
+}
+.course-page{
+    min-height: 100vh;
+    background-color: #EEF5FF;
+    padding: 40px 0;
+}
+

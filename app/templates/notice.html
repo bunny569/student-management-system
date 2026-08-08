@@ -1,0 +1,25 @@
+{% extends base_template %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style3.css' %}">
+<div class="main">
+    <div class="box2">
+    <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+</div>
+</div>
+<div class="notice-list">
+    {% for notice in notices %}
+        <div class="notice-card">
+            <h3>{{ notice.title }}</h3>
+            <p>{{ notice.text }}</p>
+            <small>{{ notice.date }}</small>
+        </div>
+    {% empty %}
+        <p>No notices available.</p>
+    {% endfor %}
+</div>
+{% endblock %}

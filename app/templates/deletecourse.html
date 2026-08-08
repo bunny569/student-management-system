@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div class="home2">
+
+    <div class=glass>
+        <h2>Are your sure</h2><br>
+    <form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Yes,delete</button>
+    <a href="{% url 'course' %}" class="btn btn-danger" >Cancel</a></div>
+</form>
+</div>
+
+{% endblock %}
