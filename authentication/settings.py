@@ -33,6 +33,9 @@ SECRET_KEY = os.environ.get(
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://student-management-system-production-e6ba.up.railway.app",
+]
 
 
 # Application definition
