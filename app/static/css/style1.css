@@ -7,11 +7,11 @@ body{
 
 }
 
-.box3{
+.box{
     display:flex;
     align-items:center;
     width:300px;
-    height:350px;
+    height:400px;
     margin:200px auto;
     background:#FFFFFF;
     border-radius:15px;
@@ -25,18 +25,18 @@ form{
     display:block;
     margin-block:50px;
 }
-.box3 form p {
+.box form p {
     display: flex;
     flex-direction: column;
 }
-.box3 input{
+.box input{
      width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 20px;
 }
-.box3 input[type="submit"]{
+.box input[type="submit"]{
     display:block;
     width:150px;
     margin:20px auto;
@@ -45,6 +45,7 @@ form{
     background: #2563EB;
     padding:4px;
     cursor:pointer;
+    font-weight:100px;
 }
 
 form label{
@@ -106,4 +107,3 @@ form button:hover{
     background-color: #EEF5FF;
     padding: 40px 0;
 }
-
