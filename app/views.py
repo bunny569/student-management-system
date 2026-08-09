@@ -154,7 +154,10 @@ def studentdashboard(request,):
      "percentage":percentage})
 
 def teacherdashboard(request):
-    return render(request,"teacherdashboard.html")
+    teacher=Teacher.objects.get(user=request.user)
+    studentcount=attendence.objects.filter(date=timezone.now().date(), status="Present").count()
+    return render(request,"teacherdashboard.html",{"teacher":teacher,
+    "studentcount":studentcount})
 def logout_view(request):
     logout(request)
     return redirect("landing")

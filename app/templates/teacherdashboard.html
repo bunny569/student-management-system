@@ -2,7 +2,24 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<div class="home">
-    <h1>hello</h1>
-</div>
+<div class="welcome">
+    <h1>Welcome, Teacher! 👋</h1><br>
+    <p>Everything you need to manage your classroom is right here.</p>
+  </div>
+ <div class="section">
+   <div class="container">
+    <h1 class="grid" href="{% url 'attendence' %}">Mark Attendence</h1>
+    <h1 class="grid">StudentsPresent:{{ studentcount }}</h1>
+    <h1 class="grid3" href="{% url 'notice' %}"> Notice</h1>
+   
+  </div>
+  <div class="teacher-profile">
+    <h1 class="name">PROFILE</h1>
+    <p>Name:{{ teacher.name }}</p>
+    <p>ID:{{ teacher.teacher_id }}</p>
+    <p>DEPARTMENT:{{ teacher.department }}</p>
+    <p>DATE OF JOINING:{{ teacher.date_of_joining }}</p>
+  </div>
+ </div>
+ 
 {% endblock %}
