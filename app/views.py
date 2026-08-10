@@ -198,7 +198,7 @@ def Attendence(request):
                 )
 
         messages.success(request, "Attendance submitted successfully.")
-        return redirect("index")
+        return redirect("teacherdashboard")
 
     return render(request, "addtendence.html", {
         "students": students
