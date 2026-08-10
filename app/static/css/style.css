@@ -170,6 +170,8 @@ body{
     font-size:20px;
     cursor:pointer;
     transition:120ms ease;
+    text-decoration:none;
+    color:black;
     
 }
 
@@ -190,6 +192,8 @@ scale:1.25;
     cursor:pointer;
     transition:120ms ease;
     margin-left:150px;
+    text-decoration:none;
+    color:black;
 }
 .grid3:hover{
     scale:1.25;
