@@ -1,7 +1,32 @@
-{% extends "base.html" %}
+{% extends base_template %}
 {% load static %}
 
 {% block content %}
+
+<div class="forminput">
+    <div class="select">
+    <form method="GET" class="input">
+    <select name="year">
+        <option value="">Select Year</option>
+        <option value="1">1st Year</option>
+        <option value="2">2nd Year</option>
+        <option value="3">3rd Year</option>
+        <option value="4">4th Year</option>
+    </select>
+    <select name="course">
+        <option value="">Select Course</option>
+        {% for course in courses %}
+        <option value="{{ course.id }}">{{ course.course }} </option>
+          {% endfor %}
+    </select>
+</div>
+  
+
+    <button type="submit" class="btn btn-primary">
+        Show Students
+    </button>
+</form>
+</div>
    <form method="POST"> 
     {% csrf_token %}
     <table class="table table-bordered table-striped">

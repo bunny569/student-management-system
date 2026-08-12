@@ -132,3 +132,32 @@ button{
 .notice-card small{
     color: gray;
 }
+.notice-card button{
+    margin-left:90%;
+    background:white;
+    color:black;
+    border:none;
+}
+.notice-card button:hover{
+    background:white;
+    color:black;
+    scale:1.25;
+}
+.pagination{
+       width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.pagination a{
+    text-decoration:none;
+    color:black;
+}
+.pagination a:hover{
+    scale:1.25;
+}
+.alert {
+    width: 100%;
+    padding: 15px 20px;
+}

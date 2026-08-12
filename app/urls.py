@@ -22,6 +22,7 @@ urlpatterns=[
     path('shownotice/',views.shownotice,name="shownotice"),
     path('course/',views.course,name="course"),
     path('deletecourse/<int:pk>/',views.delete_course,name="deletecourse"),
+    path('deletenotice/<int:pk>/',views.delete_notice,name="deletenotice"),
     path('logout/',views.logout_view,name="logout")
 
 

@@ -107,3 +107,7 @@ form button:hover{
     background-color: #EEF5FF;
     padding: 40px 0;
 }
+.alert {
+    width: 100%;
+    padding: 15px 20px;
+}

@@ -13,5 +13,15 @@
         <p>No notices available.</p>
     {% endfor %}
 </div>
-
+<div class="pagination">
+    {% if notices.has_previous %}
+       <a href="?page={{  notices.previous_page_number }}">Previous</a>
+    {% endif %}
+    <span>
+        page {{ notices.number }} of {{ notices.paginator.num_pages }}
+    </span>
+    {% if notices.has_next %}
+      <a href="?page={{ notices.next_page_number }}">Next</a>
+    {% endif %}
+</div>
 {% endblock %}

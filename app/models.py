@@ -51,10 +51,10 @@ class Teacher(models.Model):
         return self.name
 
 class attendence(models.Model):
-    student=models.ForeignKey(Student,on_delete=models.CASCADE)
     course=models.ForeignKey(Course,on_delete=models.CASCADE)
     date=models.DateField(default=timezone.now)
-    status=models.CharField()
+    year=models.ForeignKey(Student,on_delete=models.CASCADE,null=True,blank=True)
+    status=models.CharField(null=True,blank=True)
     def __str__(self):
         return self.student.roll_number
 class notice(models.Model):

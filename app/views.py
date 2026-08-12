@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.utils import timezone
 from django.contrib import messages
+from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
@@ -181,10 +182,22 @@ from django.utils import timezone
 from django.contrib import messages
 
 def Attendence(request):
-    students = Student.objects.all()
-
+  
+    year=request.GET.get("year")
+    course=request.GET.get("course")
+    courses=Course.objects.all()
+    if (year and course):
+        students=Student.objects.filter(year=year,
+                                        course=course).order_by("roll_number")
+   
+    else:
+        students=Student.objects.none()
+    form=attendenceform(request.POST or None)
+    
     if request.method == "POST":
-        for student in students:
+        if form.is_valid():
+            
+          for student in students:
             status = request.POST.get(f"attendance_{student.id}")
 
             if status:
@@ -199,9 +212,14 @@ def Attendence(request):
 
         messages.success(request, "Attendance submitted successfully.")
         return redirect("teacherdashboard")
+    if request.user.groups.filter(name="Teacher").exists():
+        template="base3.html"
 
     return render(request, "addtendence.html", {
-        "students": students
+        "students": students,
+        "form":form,
+        "courses":courses,
+        "base_template":template
     })
 
 def landing(request):
@@ -223,6 +241,9 @@ def Notice(request):
         template = "base.html"
     else:
         template = "base3.html"
+    paginator=Paginator(notices,5)
+    page_number=request.GET.get("page")
+    notices=paginator.get_page(page_number)
 
     return render(request, "notice.html", {
         "form": form,
@@ -231,6 +252,9 @@ def Notice(request):
     })
 def shownotice(request):
     notices=notice.objects.all().order_by("-date")
+    paginator=Paginator(notices,5)
+    page_number=request.GET.get("page")
+    notices=paginator.get_page(page_number)
     return render(request,"shownotice.html",{"notices":notices})
 def course(request):
     form=courseform()
@@ -253,3 +277,9 @@ def delete_course(request,pk):
         return redirect("course")
 
     return render(request, "deletecourse.html", {"course": course})
+def delete_notice(request,pk):
+    notices=get_object_or_404(notice,pk=pk)
+    if request.method=="POST":
+        notices.delete()
+        messages.success(request, "Notice deleted successfully.")
+    return redirect("notice")

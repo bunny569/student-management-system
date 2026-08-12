@@ -17,9 +17,32 @@
             <h3>{{ notice.title }}</h3>
             <p>{{ notice.text }}</p>
             <small>{{ notice.date }}</small>
+            <form method="POST" action="{% url 'deletenotice' pk=notice.id%}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         </div>
     {% empty %}
         <p>No notices available.</p>
     {% endfor %}
+</div>
+<div class="pagination">
+
+    {% if notices.has_previous %}
+        <a href="?page={{ notices.previous_page_number }}">
+            Previous
+        </a>
+    {% endif %}
+
+    <span>
+        Page {{ notices.number }} of {{ notices.paginator.num_pages }}
+    </span>
+
+    {% if notices.has_next %}
+        <a href="?page={{ notices.next_page_number }}">
+            Next
+        </a>
+    {% endif %}
+
 </div>
 {% endblock %}
